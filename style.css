@@ -1,0 +1,163 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: system-ui;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --accent-clr: #0067b8;
+  --accent-clr-trans: #0068b892;
+  --accent-clr-hover: #04528d;
+  --neutral-clr-200: #e5e5e5;
+  --neutral-clr-500: #b2b2b2;
+  --neutral-clr-700: #7a7a7a;
+}
+
+body {
+  position: relative;
+  line-height: 1.5;
+  min-height: 100vh;
+  z-index: -1;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+span,
+p,
+a {
+  font-size: 0.85rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+a {
+  margin-top: 0.5rem;
+  color: var(--accent-clr);
+}
+
+input,
+a,
+button {
+  display: block;
+}
+
+.image-bg {
+  filter: blur(0.21rem);
+  position: absolute;
+  min-height: 100vh;
+  z-index: -1;
+  object-fit: cover;
+}
+
+header {
+  height: 3rem;
+  background-color: var(--accent-clr-trans);
+}
+
+.main {
+  width: auto;
+  min-height: calc(100vh - 3rem);
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  /* display: grid; */
+  margin-inline: auto;
+  width: min(100%, 16rem);
+  padding: 1rem;
+  background-color: #fff;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2), 0 0 6px 2px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 601px) {
+  header {
+    display: none;
+  }
+
+  .main {
+    width: auto;
+    min-height: 100vh;
+    display: grid;
+    align-items: center;
+  }
+}
+
+.logo {
+  max-width: 4rem;
+  margin-bottom: 0.15rem;
+}
+
+.title {
+  font-size: clamp(0.8rem, 7vw, 1rem);
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.para {
+  font-size: 0.65rem;
+  line-height: 1.2;
+  color: var(--neutral-clr-700);
+  margin-bottom: 1.5rem;
+}
+
+.required {
+  font-size: 0.55rem;
+  line-height: 1.2;
+  color: var(--neutral-clr-700);
+  margin-bottom: 1.5rem;
+  color: var(--accent-clr);
+}
+
+.form {
+  padding-inline: 0.5rem;
+}
+
+.input {
+  width: 100%;
+  font-size: 0.7rem;
+  padding: 0.1rem;
+  border: none;
+  border-bottom: 1px solid var(--neutral-clr-500);
+  margin-bottom: 0.3rem;
+}
+
+.input:hover,
+.input:focus {
+  outline: none;
+  border-bottom: 1px solid var(--accent-clr);
+}
+
+.btn {
+  font-size: 0.9rem;
+  padding: 1rem;
+  border-radius: 0;
+  border: none;
+  width: 100%;
+  background-color: var(--accent-clr);
+  color: #fff;
+  transition: 200ms;
+  font-weight: 600;
+}
+
+.btn:hover,
+.btn:focus {
+  background: var(--accent-clr-hover);
+}
